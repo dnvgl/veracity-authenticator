@@ -1,0 +1,40 @@
+{
+  "lo": [
+    {
+      "address": "127.0.0.1",
+      "netmask": "255.0.0.0",
+      "family": "IPv4",
+      "mac": "00:00:00:00:00:00",
+      "internal": true,
+      "cidr": "127.0.0.1/8"
+    },
+    {
+      "address": "::1",
+      "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+      "family": "IPv6",
+      "mac": "00:00:00:00:00:00",
+      "scopeid": 0,
+      "internal": true,
+      "cidr": "::1/128"
+    }
+  ],
+  "eno1": [
+    {
+      "address": "192.168.1.2",
+      "netmask": "255.255.255.0",
+      "family": "IPv4",
+      "mac": "04:d4:c4:f1:ce:1d",
+      "internal": false,
+      "cidr": "192.168.1.2/24"
+    },
+    {
+      "address": "fe80::5f6f:14b0:948d:d806",
+      "netmask": "ffff:ffff:ffff:ffff::",
+      "family": "IPv6",
+      "mac": "04:d4:c4:f1:ce:1d",
+      "scopeid": 3,
+      "internal": false,
+      "cidr": "fe80::5f6f:14b0:948d:d806/64"
+    }
+  ]
+}
