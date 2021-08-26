@@ -3,16 +3,23 @@ const querystring = require("querystring");
 const randomstring = require("randomstring");
 const crypto = require("crypto");
 const base64url = require("base64url");
-const { net } = require("electron");
+const { app, net } = require("electron");
 const {
   getRefreshToken,
   setRefreshToken,
   deleteRefreshToken,
 } = require("./token-store");
 
+//--clientId=gurbagurba --scope=moregurba
+
 const authDomain =
   "login.veracity.com/te/dnvglb2cprod.onmicrosoft.com/b2c_1a_signinwithadfsidp/oauth2/v2.0";
-const clientId = "44a7ad55-45bd-4e04-b1c0-5bf0aef40ea4";
+const clientId =
+  app.commandLine.getSwitchValue("clientId") ||
+  "44a7ad55-45bd-4e04-b1c0-5bf0aef40ea4";
+const scope =
+  app.commandLine.getSwitchValue("scope") ||
+  "https://dnvglb2cprod.onmicrosoft.com/83054ebf-1d7b-43f5-82ad-b2bde84d7b75/user_impersonation";
 
 const code_verifier = randomstring.generate(128);
 const base64Digest = crypto
@@ -37,7 +44,7 @@ function getAuthenticationURL() {
     "https://" +
     authDomain +
     "/authorize" +
-    "?scope=offline_access https://dnvglb2cprod.onmicrosoft.com/83054ebf-1d7b-43f5-82ad-b2bde84d7b75/user_impersonation" +
+    `?scope=offline_access ${scope}` +
     "&response_type=code" +
     "&client_id=" +
     clientId +
