@@ -1,6 +1,6 @@
-# license-manager
+# veracity-authenticator
 
-license manager for ds applications
+veracity-authenticator for ds applications
 
 # publishing
 

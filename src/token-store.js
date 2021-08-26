@@ -1,7 +1,7 @@
 import os from "os";
 import keytar from "keytar";
 
-const keytarService = "dnv-license-manager-openid-oauth";
+const keytarService = "dnv-veracity-authenticator-openid-oauth";
 const keytarAccount = os.userInfo().username;
 
 export function getRefreshToken() {
