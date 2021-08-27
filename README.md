@@ -6,7 +6,7 @@ veracity-authenticator for ds applications
 
 set environment variables
 update package.json version
-run npm run electron:build -- -p always
+npm run release
 go to github releases
 RELEASE!
 
