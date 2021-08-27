@@ -3,10 +3,10 @@ import keytar from "keytar";
 import { app } from "electron";
 
 const refreshTokenKey =
-  app.commandLine.getSwitchValue("refreshToken") ||
+  app.commandLine.getSwitchValue("refreshTokenKey") ||
   "dnv-veracity-authenticator-refreshToken";
 const accessTokenKey =
-  app.commandLine.getSwitchValue("accessToken") ||
+  app.commandLine.getSwitchValue("accessTokenKey") ||
   "dnv-veracity-authenticator-accessToken";
 const keytarAccount = os.userInfo().username;
 

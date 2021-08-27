@@ -11,3 +11,7 @@ go to github releases
 RELEASE!
 
 (for local build run npm run electron:build)
+
+# usage
+
+run %LocalAppData%\Programs\veracity-authenticator\Veracity Authenticator.exe --clientId= --scope= --accessTokenKey= --refreshTokenKey=
