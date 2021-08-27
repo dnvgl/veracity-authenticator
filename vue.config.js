@@ -33,7 +33,7 @@ module.exports = {
       externals: ["keytar"],
       builderOptions: {
         publish: ["github"],
-        productName: "Logged in",
+        productName: "Veracity Authenticator",
       },
     },
   },

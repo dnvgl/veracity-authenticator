@@ -3,8 +3,6 @@ code-signing-cert/
 config.json
 setenv.ps1
 
-build/
-
 # Logs
 logs
 *.log

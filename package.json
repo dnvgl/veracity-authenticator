@@ -1,6 +1,6 @@
 {
   "name": "veracity-authenticator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -46,7 +46,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "mocha": "^8.3.2",
     "node-sass": "^4.14.1",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^10.1.0",
     "vue-cli-plugin-electron-builder": "~2.0.0-rc.6",
     "vue-template-compiler": "^2.6.11"
   },

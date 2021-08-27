@@ -8,6 +8,7 @@ const {
   getRefreshToken,
   setRefreshToken,
   deleteRefreshToken,
+  setAccessToken,
 } = require("./token-store");
 
 //--clientId=gurbagurba --scope=moregurba
@@ -97,6 +98,7 @@ async function refreshTokens() {
           response.on("end", () => {
             const data = JSON.parse(body);
             accessToken = data.access_token;
+            await setAccessToken(accessToken);
             resolve();
           });
         });
@@ -176,6 +178,10 @@ async function loadTokens(callbackURL) {
 
     if (refreshToken) {
       await setRefreshToken(refreshToken);
+    }
+
+    if (accessToken) {
+      await setAccessToken(accessToken);
     }
 
     console.log("authenticated");
