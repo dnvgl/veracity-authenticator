@@ -27,8 +27,6 @@ module.exports = {
   },
   pluginOptions: {
     electronBuilder: {
-      productName: "Veracity Authenticator",
-      appId: "dnv.veracityauth",
       preload: "src/preload.js",
       externals: ["keytar"],
       builderOptions: {
