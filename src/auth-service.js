@@ -98,7 +98,7 @@ async function refreshTokens() {
           response.on("end", () => {
             const data = JSON.parse(body);
             accessToken = data.access_token;
-            await setAccessToken(accessToken);
+            setAccessToken(accessToken);
             resolve();
           });
         });
